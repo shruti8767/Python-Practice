@@ -6,21 +6,19 @@ operation=(input("Which operation you want to perform, please type (+,-,*,/,%,**
 
 if operation == '+':
     result=num1+num2
-    print(result)
 elif operation == '-':
     result=num1-num2
-    print(result)
 elif operation == '*':
     result=num1*num2
-    print(result)
 elif operation == '/':
-    result=num1/num2
-    print(result)
+    if num2!=0:
+        result=num1/num2
+    else:
+        result="Error! Division by zero."
 elif operation == '%':
     result=num1%num2
-    print(result)
 elif operation == '**':
     result=num1**num2
-    print(result)
 else:
-    print("Invalid input.")
+    result="Invalid input"
+print("Result:",result)
